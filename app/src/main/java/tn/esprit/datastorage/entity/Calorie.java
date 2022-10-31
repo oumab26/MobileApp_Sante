@@ -10,20 +10,20 @@ public class Calorie {
     @PrimaryKey(autoGenerate = true)
     private int id;
     @ColumnInfo
-    private float taille;
+    private double taille;
     @ColumnInfo
-    private float poid;
+    private double poid;
 
     public Calorie() {
     }
 
-    public Calorie(int id, float taille, float poid) {
+    public Calorie(int id, double taille, double poid) {
         this.id = id;
         this.taille = taille;
         this.poid = poid;
     }
 
-    public Calorie(float taille, float poid) {
+    public Calorie(double taille, double poid) {
         this.taille = taille;
         this.poid = poid;
     }
@@ -36,7 +36,7 @@ public class Calorie {
         this.id = id;
     }
 
-    public float getTaille() {
+    public double getTaille() {
         return taille;
     }
 
@@ -44,7 +44,7 @@ public class Calorie {
         this.taille = taille;
     }
 
-    public float getPoid() {
+    public double getPoid() {
         return poid;
     }
 

@@ -2,6 +2,7 @@ package tn.esprit.datastorage;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,7 +21,7 @@ public class CalorieActivity extends AppCompatActivity {
     EditText poid;
     Button add;
     Button logout;
-    TextView list;
+    TextView result;
 
 
     @Override
@@ -29,26 +30,44 @@ public class CalorieActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calorie);
 
         SharedPreferences sp = getSharedPreferences("sp", MODE_PRIVATE);
-        setTitle("Hello " + sp.getString("username", "Skander"));
+
         taille = findViewById(R.id.taille);
         poid = findViewById(R.id.poid);
         add = findViewById(R.id.add);
-        list = findViewById(R.id.calorie);
+        result = findViewById(R.id.result);
         logout = findViewById(R.id.logout);
         MyDatabase db = MyDatabase.getDatabase(CalorieActivity.this);
-        add.setOnClickListener(v -> {
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-            float Taille = Float.parseFloat(taille.getText().toString());
-            float Poid = Float.parseFloat(poid.getText().toString());
-            Calorie a = new Calorie(Taille, Poid);
+                double T = Double.parseDouble(taille.getText().toString());
+                double P = Double.parseDouble(poid.getText().toString());
 
-            db.CalorieDAO().insertCalorie(a);
 
-            List<Calorie> articleList = db.CalorieDAO().findCalorie();
+                double  c =P/(T*T);
+                String res= "";
+                if(c >=40){
+                    res="obésité morbide ou massive";
+                }else if(c <40 && c >=35){
+                    res="obésité sévére";
+                }else if(c <35 && c >=30){
+                    res="obésité modérée";
+                }else if(c <33  && c >=25){
+                    res ="surpoids";
+                }else if(c <25 && c >=18.5){
+                    res ="corpulence normale";
+                }else if(c <18.5 && c >=16.5){
+                    res ="maigreur";
+                }
+                else{
+                    res ="famine";
+                }
+                result.setText(res);
+            }
 
-            list.setText(articleList.toString());
+
         });
-
         logout.setOnClickListener(v -> {
             sp.edit().clear().apply();
             finish();
