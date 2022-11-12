@@ -20,7 +20,7 @@ public class CalorieActivity extends AppCompatActivity {
     EditText taille;
     EditText poid;
     Button add;
-    Button logout;
+    //Button logout;
     TextView result;
 
 
@@ -35,7 +35,7 @@ public class CalorieActivity extends AppCompatActivity {
         poid = findViewById(R.id.poid);
         add = findViewById(R.id.add);
         result = findViewById(R.id.result);
-        logout = findViewById(R.id.logout);
+        //logout = findViewById(R.id.logout);
         MyDatabase db = MyDatabase.getDatabase(CalorieActivity.this);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,10 +68,10 @@ public class CalorieActivity extends AppCompatActivity {
 
 
         });
-        logout.setOnClickListener(v -> {
-            sp.edit().clear().apply();
-            finish();
-        });
+       // logout.setOnClickListener(v -> {
+       //     sp.edit().clear().apply();
+       //     finish();
+       // });
 
 
     }
