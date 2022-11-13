@@ -1,5 +1,6 @@
 package tn.esprit.datastorage;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -23,13 +24,14 @@ public class CalorieActivity extends AppCompatActivity {
     //Button logout;
     TextView result;
 
-
+    @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calorie);
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
-        SharedPreferences sp = getSharedPreferences("sp", MODE_PRIVATE);
+        //SharedPreferences sp = getSharedPreferences("sp", MODE_PRIVATE);
 
         taille = findViewById(R.id.taille);
         poid = findViewById(R.id.poid);

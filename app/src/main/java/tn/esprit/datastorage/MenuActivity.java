@@ -14,7 +14,7 @@ public class MenuActivity extends AppCompatActivity {
     Button calculateCalories;
     Button bmiActivity;
 
-    SharedPreferences sp = getSharedPreferences("sp", MODE_PRIVATE);
+    //SharedPreferences sp = getSharedPreferences("sp", MODE_PRIVATE);
 
 
 
@@ -50,7 +50,7 @@ public class MenuActivity extends AppCompatActivity {
 
 
         logout.setOnClickListener(v -> {
-             sp.edit().clear().apply();
+            // sp.edit().clear().apply();
              finish();
          });
 

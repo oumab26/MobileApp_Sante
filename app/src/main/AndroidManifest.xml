@@ -41,6 +41,7 @@
         </activity>
         <activity
             android:name=".CalorieActivity"
+            android:parentActivityName=".MenuActivity"
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"
