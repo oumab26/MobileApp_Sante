@@ -29,7 +29,8 @@ public class BmiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmi);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
-
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.gymicon);
         calculateBmi = findViewById(R.id.btnCalculateBmi);
         result = findViewById(R.id.texteres);
         women = findViewById(R.id.btnWomen);
