@@ -13,6 +13,7 @@ public class MenuActivity extends AppCompatActivity {
     Button calculateCalories;
     Button bmiActivity;
     Button btnGym;
+    Button btnchrono;
 
 
     //SharedPreferences sp = getSharedPreferences("sp", MODE_PRIVATE);
@@ -29,6 +30,7 @@ public class MenuActivity extends AppCompatActivity {
         calculateCalories = findViewById(R.id.btnCalorie);
         bmiActivity = findViewById(R.id.btnBmi);
         btnGym = findViewById(R.id.btnGym);
+        btnchrono = findViewById(R.id.btnchrono);
         logout = findViewById(R.id.btnLogout);
 
         calculateCalories.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +55,15 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MenuActivity.this, ExerciceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnchrono.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MenuActivity.this, ChronoActivity.class);
                 startActivity(intent);
             }
         });
