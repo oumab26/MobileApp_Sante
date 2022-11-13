@@ -40,10 +40,8 @@ public class ExerciceAdapter extends RecyclerView.Adapter<ExerciceViewHolder> {
         holder.name.setText(exercice.getName());
 
         holder.image.setBackgroundResource(exercice.getPicture());
+        holder.category.setText(exercice.getCategory());
         System.out.println(exercice.getPicture());
-        //holder.price.setText(String.valueOf(exercice.getName()));
-
-
         holder.itemView.setOnClickListener(v -> {
             Toast.makeText(v.getContext(), exercice.getName() + " Clicked", Toast.LENGTH_SHORT).show();
 

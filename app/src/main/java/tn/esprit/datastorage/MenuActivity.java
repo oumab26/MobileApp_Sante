@@ -25,11 +25,14 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.gymicon);
         calculateCalories = findViewById(R.id.btnCalorie);
         bmiActivity = findViewById(R.id.btnBmi);
         btnGym = findViewById(R.id.btnGym);
         logout = findViewById(R.id.btnLogout);
+
+        calculateCalories.setBackgroundColor(0x000);
 
         calculateCalories.setOnClickListener(new View.OnClickListener() {
             @Override
