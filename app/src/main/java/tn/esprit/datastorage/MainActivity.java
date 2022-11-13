@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG).show();
 
             // Going to Dashboard activity after login success message.
-            Intent intent = new Intent(MainActivity.this, CalorieActivity.class);
+            Intent intent = new Intent(MainActivity.this, MenuActivity.class);
 
             // Sending Email to Dashboard Activity using intent.
             intent.putExtra(UserEmail, EmailHolder);
