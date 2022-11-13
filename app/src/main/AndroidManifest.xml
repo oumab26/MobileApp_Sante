@@ -46,6 +46,11 @@
         <activity
             android:name=".RegisterActivity"
             android:exported="true" />
+        <activity
+            android:name=".ExerciceActivity"
+            android:parentActivityName=".MenuActivity"
+            android:exported="true" />
     </application>
+
 
 </manifest>
