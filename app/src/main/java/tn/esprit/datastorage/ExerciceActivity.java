@@ -22,10 +22,12 @@ public class ExerciceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercice);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.gymicon);
 
         ExerciceAdapter adapter = new ExerciceAdapter(this);
         MyDatabase db = MyDatabase.getDatabase(ExerciceActivity.this);
-        Exercice exercice1 = new Exercice("Deadlift","Deadlift is a mandatory exercice","back",R.drawable.th_15_);
+        Exercice exercice1 = new Exercice("Deadlift","Back","Deadlift is a mandatory exercice",R.drawable.deadlift);
        // Exercice exercice2 = new Exercice("push up","Deadlift is a mandatory exercice","back","path fr pics");
        // Exercice exercice3 = new Exercice("Hamer","Deadlift is a mandatory exercice","back","path fr pics");
 
