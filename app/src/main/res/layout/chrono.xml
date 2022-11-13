@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:gravity="center"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".ChronoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="192dp"
+            android:layout_height="78dp"
+            android:textSize="30sp"
+            android:textColor="#8A2BE2"
+            android:textAlignment="center"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center_horizontal"
+
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:background="#000000"
+        android:orientation="vertical"
+       >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="341dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/chronometer_with_icons_elements_sport_circular_frames_around_18591_9876" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="12"
+        android:background="#8A2BE2"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:onClick="startChronometer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Sart"
+            android:textSize="18dp"
+            android:typeface="monospace" />
+
+        <Button
+            android:onClick="pauseChronometer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="Pause"
+            android:textSize="18dp"/>
+
+        <Button
+            android:onClick="resetChronometer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Reset"
+            android:textSize="18dp"/>
+    </LinearLayout>
+</LinearLayout>

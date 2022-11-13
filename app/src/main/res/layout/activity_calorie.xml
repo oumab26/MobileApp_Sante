@@ -5,35 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".CalorieActivity">
 
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="343dp"
-        android:layout_height="124dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/th_15_"
-        tools:layout_editor_absoluteX="16dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="127dp"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentTop="true"
-        android:gravity="center"
-        android:text="IMC"
-        android:textColor="#000"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="123dp" />
+        android:id="@+id/imageView4"
+        android:layout_width="400dp"
+        android:layout_height="139dp"
+        app:srcCompat="@drawable/icons_bmi"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <EditText
         android:id="@+id/taille"
@@ -49,10 +31,10 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.197" />
+        app:layout_constraintVertical_bias="0.357" />
 
     <EditText
         android:id="@+id/poid"
@@ -64,38 +46,53 @@
         android:inputType="numberDecimal|numberSigned"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.427"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.279"
+        app:layout_constraintVertical_bias="0.352"
         tools:ignore="DuplicateIds" />
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="217dp"
-        android:layout_height="39dp"
-        android:text="Resultat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673"
-        tools:ignore="MissingConstraints" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ChronoActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp">
 
-    <Button
-        android:id="@+id/add"
-        android:layout_width="183dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="4dp"
+        <Button
+            android:id="@+id/add"
+            android:layout_width="183dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
 
 
-        android:text="Calculate"
+            android:layout_marginTop="200dp"
+            android:text="Calculate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.48"
+            tools:ignore="MissingConstraints" />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="197dp"
+            android:layout_height="105dp"
+
+            android:text="Resultat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.373"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.838"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,6 +50,10 @@
             android:name=".ExerciceActivity"
             android:parentActivityName=".MenuActivity"
             android:exported="true" />
+        <activity
+            android:name=".ChronoActivity"
+            android:parentActivityName=".MenuActivity"
+            android:exported="true" />
     </application>
 
 
