@@ -10,11 +10,7 @@
     android:backgroundTint="@color/black"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="match_parent"
-        android:layout_height="305dp"
-        app:srcCompat="@drawable/login" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -32,7 +28,7 @@
         android:layout_height="52dp"
         android:layout_below="@+id/textView"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="-79dp"
         android:layout_marginRight="40dp"
         android:background="@color/white"
         android:ems="10"
@@ -80,5 +76,11 @@
         android:backgroundTint="@color/white"
         android:text="Sign Up"
         android:textColor="#000" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="401dp"
+        android:layout_height="186dp"
+        app:srcCompat="@drawable/login" />
 
 </RelativeLayout>
