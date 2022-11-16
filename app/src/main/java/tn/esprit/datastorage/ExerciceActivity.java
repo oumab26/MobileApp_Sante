@@ -1,6 +1,7 @@
 package tn.esprit.datastorage;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,21 +28,23 @@ public class ExerciceActivity extends AppCompatActivity {
 
         ExerciceAdapter adapter = new ExerciceAdapter(this);
         MyDatabase db = MyDatabase.getDatabase(ExerciceActivity.this);
-        Exercice exercice1 = new Exercice("Deadlift","Back","Deadlift is a mandatory exercice",R.drawable.deadlift);
-       // Exercice exercice2 = new Exercice("push up","Deadlift is a mandatory exercice","back","path fr pics");
-       // Exercice exercice3 = new Exercice("Hamer","Deadlift is a mandatory exercice","back","path fr pics");
+        Exercice exercice1 = new Exercice("Deadlift","All Body/Back","Deadlift is a mandatory exercice",R.drawable.deadlift);
+        //Exercice exercice2 = new Exercice("Sqaut","All Body/Legs","who the hell will deny Squat",R.drawable.squat);
+        //Exercice exercice3 = new Exercice("Biceps curl","Arm","my second exercice",R.drawable.biceps);
 
         db.ExerciceDAO().insertExercice(exercice1);
-       // db.ExerciceDAO().insertExercice(exercice2);
-       // db.ExerciceDAO().insertExercice(exercice3);
+        //db.ExerciceDAO().insertExercice(exercice2);
+        //db.ExerciceDAO().insertExercice(exercice3);
         List<Exercice> exerciceList = db.ExerciceDAO().findExercices();
 
-      for(Exercice e : exerciceList){
-           adapter.addExercice(e);
-       }
+        for(Exercice e : exerciceList) {
+            adapter.addExercice(e);
+        }
         /*for(Exercice e : exerciceList){
             db.ExerciceDAO().deleteExercice(e);
         }*/
+
+
         recyclerView = findViewById(R.id.articles);
 
         recyclerView.setAdapter(adapter);

@@ -13,7 +13,7 @@ import tn.esprit.datastorage.dao.ExerciceDAO;
 import tn.esprit.datastorage.entity.Calorie;
 import tn.esprit.datastorage.entity.Exercice;
 
-@Database(entities = {Calorie.class,Exercice.class}, version = 2, exportSchema = false)
+@Database(entities = {Calorie.class,Exercice.class}, version = 3, exportSchema = false)
 public abstract class MyDatabase extends RoomDatabase {
 
     private static MyDatabase instance;

@@ -1,6 +1,7 @@
 package tn.esprit.datastorage;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -38,15 +39,9 @@ public class ExerciceAdapter extends RecyclerView.Adapter<ExerciceViewHolder> {
     public void onBindViewHolder(@NonNull ExerciceViewHolder holder, int position) {
         Exercice exercice =  exerciceList.get(position);
         holder.name.setText(exercice.getName());
-
         holder.image.setBackgroundResource(exercice.getPicture());
         holder.category.setText(exercice.getCategory());
-        System.out.println(exercice.getPicture());
-        holder.itemView.setOnClickListener(v -> {
-            Toast.makeText(v.getContext(), exercice.getName() + " Clicked", Toast.LENGTH_SHORT).show();
-
-        });
-
+        holder.description.setText(exercice.getDescription());
     }
 
     @Override

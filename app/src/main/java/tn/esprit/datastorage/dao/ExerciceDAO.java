@@ -25,4 +25,7 @@ public interface ExerciceDAO {
 
     @Query("SELECT * FROM Exercice")
     public List<Exercice> findExercices();
+
+    @Query("SELECT * FROM Exercice WHERE Exercice.name == :name")
+    public Exercice get(String name);
 }

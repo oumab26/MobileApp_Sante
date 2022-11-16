@@ -2,6 +2,7 @@ package tn.esprit.datastorage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,7 @@ public class MenuActivity extends AppCompatActivity {
 
     Button logout;
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +37,6 @@ public class MenuActivity extends AppCompatActivity {
         logout = findViewById(R.id.btnLogout);
 
         calculateCalories.setBackgroundColor(0x000);
-
         calculateCalories.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
