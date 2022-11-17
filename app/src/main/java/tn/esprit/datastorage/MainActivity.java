@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
     // Checking entered password from SQLite database email associated password.
     public void CheckFinalResult(){
 
+
         if(TempPassword.equalsIgnoreCase(PasswordHolder))
         {
 
@@ -145,6 +146,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
 
 
+        }
+        if((Email.getText().toString().equals("admin")) && (Password.getText().toString().equals("admin"))) {
+
+            Intent intent = new Intent(MainActivity.this, AdminActivity.class);
+            startActivity(intent);
         }
         else {
 

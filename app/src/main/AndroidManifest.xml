@@ -14,9 +14,16 @@
         android:theme="@style/Theme.DataStorage"
         tools:targetApi="31">
         <activity
-            android:name=".ExerciceDetailsActivity"
-            android:parentActivityName=".ExerciceActivity"
+            android:name=".AdminActivity"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ExerciceDetailsActivity"
+            android:exported="false"
+            android:parentActivityName=".ExerciceActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
