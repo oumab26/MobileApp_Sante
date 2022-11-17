@@ -74,7 +74,7 @@ public class MenuActivity extends AppCompatActivity {
 
 
         logout.setOnClickListener(v -> {
-            // sp.edit().clear().apply();
+
              finish();
          });
 

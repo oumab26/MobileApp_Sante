@@ -13,6 +13,8 @@ public class AdminActivity extends AppCompatActivity {
     Button addExercice;
     Button addRecepie;
     ImageView adminLogout;
+
+
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +34,21 @@ public class AdminActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(AdminActivity.this, AddExerciceActivity.class);
                 startActivity(intent);
-                //System.out.println("ADD exercice Button clicked successfully ! ");
             }
         });
+
+
+        adminLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                adminLogout.setOnClickListener(v -> {
+                    finish();
+                });
+            }
+        });
+
+
+
     }
 }

@@ -34,5 +34,8 @@ public class ExerciceDetailsActivity extends AppCompatActivity {
         exercicename.setText(exerciceName);
         image.setBackgroundResource(exerciceImage);
 
+
+
+
     }
 }
