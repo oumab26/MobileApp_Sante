@@ -24,15 +24,15 @@ public class AdminActivity extends AppCompatActivity {
         addExercice = findViewById(R.id.addExercice);
         addRecepie = findViewById(R.id.addRecepie);
         adminLogout = findViewById(R.id.adminLogout);
-        
+
 
         addExercice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                /*Intent intent = new Intent(AdminActivity.this, CalorieActivity.class);
-                startActivity(intent);*/
-                System.out.println("ADD exercice Button clicked successfully ! ");
+                Intent intent = new Intent(AdminActivity.this, AddExerciceActivity.class);
+                startActivity(intent);
+                //System.out.println("ADD exercice Button clicked successfully ! ");
             }
         });
     }

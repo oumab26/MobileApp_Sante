@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spinnerItems">
+        <item>Deadlift</item>
+        <item>Biceps</item>
+        <item>Squat</item>
+        <item>Triceps</item>
+    </string-array>
+
+
+</resources>
+
+
